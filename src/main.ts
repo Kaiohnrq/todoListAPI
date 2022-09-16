@@ -7,9 +7,9 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-  .setTitle('Todo Mobile')
-  .setDescription('Projeto Todo Mobile')
-  .setContact("Henrique Felipe","http://www.generationbrasil.online","generation@email.com")
+  .setTitle('TodoList')
+  .setDescription('Projeto TodoList')
+  .setContact("Generation Brasil","http://www.generationbrasil.online","generation@email.com")
   .setVersion('1.0')
   .addBearerAuth()
   .build()
@@ -20,6 +20,6 @@ async function bootstrap() {
 
   app.useGlobalPipes(new ValidationPipe())
   app.enableCors()
-  await app.listen(3000);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
