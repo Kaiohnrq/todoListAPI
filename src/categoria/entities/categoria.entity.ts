@@ -17,7 +17,7 @@ export class Categoria {
     descricao: string
 
     @OneToMany(() => Tarefa, (tarefa) => tarefa.categoria)
-    @ApiProperty()
+    @ApiProperty({type: () => Tarefa})
     tarefas: Tarefa[]
 
 }

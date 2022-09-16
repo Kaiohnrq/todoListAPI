@@ -7,9 +7,9 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-  .setTitle('TodoList')
+  .setTitle('To Do List')
   .setDescription('Projeto TodoList')
-  .setContact("Generation Brasil","http://www.generationbrasil.online","generation@email.com")
+  .setContact("Kaio Henrique","https://github.com/Kaiohnrq","kaio.gunz@gmail.com")
   .setVersion('1.0')
   .addBearerAuth()
   .build()
